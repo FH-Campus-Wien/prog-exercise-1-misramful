@@ -38,6 +38,18 @@ public class App {
 
     //todo Task 3
     public void sumOfLiterals(){
+
+        char zahl1 = 'Z';
+        int zahl2 = 0xface;
+        int zahl3 = 012;
+        long zahl4 = 80L;
+        float zahl5 = 44e-1f;
+        float zahl6 = 5.5f;
+        double zahl7 = 8.88e1;
+        double zahl8 = 99.9;
+
+        int sum = (int) (zahl1 + zahl2 + zahl3 + zahl4 + zahl5 + zahl6 + zahl7 + zahl8);
+        System.out.println(sum);
         // input your solution here
     }
 
@@ -64,17 +76,23 @@ public class App {
     //STEP 8: END.
     public void swapTwoNumbers(){
         Scanner scan = new Scanner(System.in);
+        System.out.println("Before Swap: ");
+        System.out.print("x: ");
         int x = scan.nextInt();
-       System.out.println("x = " + x);
+        System.out.println("");
+       //System.out.println("x = " + x);
+        System.out.print("y: ");
         int y = scan.nextInt();
-       System.out.println("y = " + y);
+        System.out.println("");
+       //System.out.println("y = " + y);
        // System.out.println("");
 
         x = x + y;
         y = x - y;
         x = x - y;
-       // System.out.println("x = " + x);
-       // System.out.println("y = " + y);
+        System.out.println("After Swap:");
+        System.out.println("x: " + x);
+        System.out.println("y: " + y);
 
     }
 
@@ -82,17 +100,17 @@ public class App {
     public void compareTwoNumbers(){
         Scanner scan = new Scanner(System.in);
         int x = scan.nextInt();
-        System.out.println("x = " + x);
+        System.out.println("n1:" + x);
         int y = scan.nextInt();
-        System.out.println("y = " + y);
+        System.out.println("n2:" + y);
         System.out.println("");
 
         if (x > y) {
-            System.out.println("x > y");
+            System.out.println("n1 > n2");
         } else if (x == y) {
-                System.out.println("x = y");
+                System.out.println("n1 == n2");
             } else {
-            System.out.println("y > x");
+            System.out.println("n2 > n1");
         }
 
     }
@@ -100,8 +118,8 @@ public class App {
     //todo Task 7
     public void ratingSalesPerson(){
         Scanner scan = new Scanner(System.in);
+        System.out.println("Enter annual Revenue:");
         int umsatz = scan.nextInt();
-
         if (umsatz < 0 || umsatz >= 100000) {
             System.out.println("Invalid Revenue");
         } else if (umsatz >= 0 && umsatz < 20000) {
@@ -128,23 +146,24 @@ public class App {
     //todo Task 8
     public void getCommissionRate(){
         Scanner scan = new Scanner(System.in);
+        System.out.println("Enter CommissionClass:");
         int provision = scan.nextInt();
 
         switch (provision) {
             case 1:
-                System.out.println("0,01");
+                System.out.println("Your Commission Rate was set to 0,01");
                 break;
             case 2:
-                System.out.println("0,02");
+                System.out.println("Your Commission Rate was set to 0,02");
                 break;
             case 3:
-                System.out.println("0,03");
+                System.out.println("Your Commission Rate was set to 0,03");
                 break;
             case 4:
-                System.out.println("0,04");
+                System.out.println("Your Commission Rate was set to 0,04");
                 break;
             default: //in jedem anderen Fall
-                System.out.println("Provision ist 0");
+                System.out.println("Your Commission Rate was set to 0");
 
         }
     }
@@ -152,15 +171,15 @@ public class App {
     //todo Task 9
     public void leapyear(){
         Scanner scan = new Scanner(System.in);
+        System.out.println("Year:");
         int jahr = scan.nextInt();
-
         if (jahr % 100 == 0 && jahr % 400 != 0) {//bedeutet 1900 kein Schaltjahr, weil durch 100 teilbar
-            System.out.println("Dieses Jahr ist kein Schaltjahr.");
+            System.out.println("Not a Leapyear");
         }
             else if (jahr % 4 == 0) {
-            System.out.println("Dieses Jahr ist ein Schaltjahr.");
+            System.out.println("Leapyear");
         } else {
-            System.out.println("Dieses Jahr ist kein Schaltjahr."); //alle Jahre die nicht durch 4 oder 100 teilbar sind
+            System.out.println("Not a Leapyear"); //alle Jahre die nicht durch 4 oder 100 teilbar sind
 
         }
     }
@@ -170,6 +189,7 @@ public class App {
     //todo Task 10
     public void transposedNumbers(){
         Scanner scan = new Scanner(System.in);
+        System.out.println("Number: ");
         int zahl = scan.nextInt();
 
         if (zahl < 1000) {
