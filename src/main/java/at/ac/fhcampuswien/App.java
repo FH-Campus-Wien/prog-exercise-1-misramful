@@ -46,9 +46,9 @@ public class App {
         // input your solution here
 
         Scanner scan = new Scanner(System.in);
-        System.out.println("bitte geben Sie eine Zahl ein");
+       // System.out.println("bitte geben Sie eine Zahl ein");
         int x = scan.nextInt();
-        System.out.println("bitte geben Sie eine weitere Zahl ein");
+       // System.out.println("bitte geben Sie eine weitere Zahl ein");
         int y = scan.nextInt();
 
         System.out.println(x + y);
@@ -65,16 +65,16 @@ public class App {
     public void swapTwoNumbers(){
         Scanner scan = new Scanner(System.in);
         int x = scan.nextInt();
-        System.out.println("x = " + x);
+       System.out.println("x = " + x);
         int y = scan.nextInt();
-        System.out.println("y = " + y);
-        System.out.println("");
+       System.out.println("y = " + y);
+       // System.out.println("");
 
         x = x + y;
         y = x - y;
         x = x - y;
-        System.out.println("x = " + x);
-        System.out.println("y = " + y);
+       // System.out.println("x = " + x);
+       // System.out.println("y = " + y);
 
     }
 
@@ -88,11 +88,11 @@ public class App {
         System.out.println("");
 
         if (x > y) {
-            System.out.println("x ist größer als y");
+            System.out.println("x > y");
         } else if (x == y) {
-                System.out.println("x ist gleich groß wie y");
+                System.out.println("x = y");
             } else {
-            System.out.println("y ist größer als x");
+            System.out.println("y > x");
         }
 
     }
