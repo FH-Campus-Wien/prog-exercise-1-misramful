@@ -48,7 +48,13 @@ public class App {
         double zahl7 = 8.88e1;
         double zahl8 = 99.9;
 
-        int sum = (int) (zahl1 + zahl2 + zahl3 + zahl4 + zahl5 + zahl6 + zahl7 + zahl8);
+        int zahl4a = (int) zahl4;
+        int zahl5a = (int) zahl5;
+        int zahl6a = (int) zahl6;
+        int zahl7a = (int) zahl7;
+        int zahl8a = (int) zahl8;
+
+        int sum = (zahl1 + zahl2 + zahl3 + zahl4a + zahl5a + zahl6a + zahl7a + zahl8a);
         System.out.println(sum);
         // input your solution here
     }
@@ -76,14 +82,14 @@ public class App {
     //STEP 8: END.
     public void swapTwoNumbers(){
         Scanner scan = new Scanner(System.in);
-        System.out.println("Before Swap: ");
+        System.out.println("Before Swap:");
         System.out.print("x: ");
         int x = scan.nextInt();
-        System.out.println("");
+      //  System.out.println("");
        //System.out.println("x = " + x);
         System.out.print("y: ");
         int y = scan.nextInt();
-        System.out.println("");
+     //   System.out.println("");
        //System.out.println("y = " + y);
        // System.out.println("");
 
@@ -99,11 +105,11 @@ public class App {
     //todo Task 6
     public void compareTwoNumbers(){
         Scanner scan = new Scanner(System.in);
+        System.out.print("n1: ");
         int x = scan.nextInt();
-        System.out.println("n1:" + x);
+        System.out.print("n2: ");
         int y = scan.nextInt();
-        System.out.println("n2:" + y);
-        System.out.println("");
+
 
         if (x > y) {
             System.out.println("n1 > n2");
@@ -118,7 +124,7 @@ public class App {
     //todo Task 7
     public void ratingSalesPerson(){
         Scanner scan = new Scanner(System.in);
-        System.out.println("Enter annual Revenue:");
+        System.out.print("Enter annual Revenue: ");
         int umsatz = scan.nextInt();
         if (umsatz < 0 || umsatz >= 100000) {
             System.out.println("Invalid Revenue");
@@ -134,7 +140,8 @@ public class App {
             System.out.println("Good Sales Revenue");
         }
 
-            else if (umsatz >= 80000 && umsatz < 100000) {
+        else //if (umsatz >= 80000 && umsatz < 100000)
+             {
                 System.out.println("Excellent Sales Revenue");
             }
 
@@ -146,24 +153,24 @@ public class App {
     //todo Task 8
     public void getCommissionRate(){
         Scanner scan = new Scanner(System.in);
-        System.out.println("Enter CommissionClass:");
+        System.out.print("Enter CommissionClass: ");
         int provision = scan.nextInt();
 
         switch (provision) {
             case 1:
-                System.out.println("Your Commission Rate was set to 0,01");
+                System.out.println("Your Commission Rate was set to 0.01");
                 break;
             case 2:
-                System.out.println("Your Commission Rate was set to 0,02");
+                System.out.println("Your Commission Rate was set to 0.02");
                 break;
             case 3:
-                System.out.println("Your Commission Rate was set to 0,03");
+                System.out.println("Your Commission Rate was set to 0.03");
                 break;
             case 4:
-                System.out.println("Your Commission Rate was set to 0,04");
+                System.out.println("Your Commission Rate was set to 0.04");
                 break;
             default: //in jedem anderen Fall
-                System.out.println("Your Commission Rate was set to 0");
+                System.out.println("Your Commission Rate was set to 0.0");
 
         }
     }
@@ -171,7 +178,7 @@ public class App {
     //todo Task 9
     public void leapyear(){
         Scanner scan = new Scanner(System.in);
-        System.out.println("Year:");
+        System.out.print("Year: ");
         int jahr = scan.nextInt();
         if (jahr % 100 == 0 && jahr % 400 != 0) {//bedeutet 1900 kein Schaltjahr, weil durch 100 teilbar
             System.out.println("Not a Leapyear");
@@ -189,13 +196,14 @@ public class App {
     //todo Task 10
     public void transposedNumbers(){
         Scanner scan = new Scanner(System.in);
-        System.out.println("Number: ");
+        System.out.print("Number: ");
         int zahl = scan.nextInt();
 
         if (zahl < 1000) {
 
             while (zahl != 0) { //passiert während die Zahl nicht 0 ist
                 int neueZahl = (zahl % 10); //neue Zahl ist der Rest der Zahl, wenn ich sie durch 10 dividiere
+
                 System.out.print(neueZahl);
                 zahl = zahl / 10;//Komma wird nach rechts verschoben
             }
