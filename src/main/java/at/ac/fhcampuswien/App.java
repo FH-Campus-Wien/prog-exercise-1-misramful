@@ -191,10 +191,30 @@ public class App {
         }
     }
 
-
-
-    //todo Task 10
     public void transposedNumbers(){
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Number: ");
+        int dreistellig= scanner.nextInt();
+
+        int hunderter=dreistellig/100;
+        int einser=dreistellig%10;
+        int zehner=dreistellig%100/10;
+
+        System.out.print(einser);
+        System.out.print(zehner);
+        System.out.println(hunderter);
+        //  System.out.println(hunderter);
+        //  System.out.println(zehner);
+        //  System.out.println(einser);
+    }
+
+
+    /*
+    //todo Task 10
+
+    public void transposedNumbers()
+    {
         Scanner scan = new Scanner(System.in);
         System.out.print("Number: ");
         int zahl = scan.nextInt();
@@ -211,7 +231,7 @@ public class App {
 
         }
 
-    }
+    }*/
 
 
     public static void main(String[] args){
